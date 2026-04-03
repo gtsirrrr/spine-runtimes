@@ -1,5 +1,4 @@
 name: Build spine-godot GDExtension (All Godot 4.x versions)
-
 on:
   push:
     paths:
@@ -7,14 +6,13 @@ on:
       - 'spine-godot/**'
       - 'spine-cpp/**'
   workflow_dispatch:
-
 jobs:
   build-versions:
     strategy:
       matrix:
         version:
           [
-            {"tag": "4.6.1-stable", "version": "4.6.1.stable", "dev": false},
+            {"tag": "4.5.1-stable", "version": "4.5.1.stable", "dev": false},
           ]
     uses: ./.github/workflows/spine-godot-extension-v4.yml
     with:
